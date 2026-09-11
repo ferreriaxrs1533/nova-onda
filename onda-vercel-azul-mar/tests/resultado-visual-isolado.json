@@ -1,0 +1,46 @@
+{
+  "mode": "isolated Chromium with HTTP bridge to local API; real browser navigation to localhost is blocked by environment policy",
+  "cloud": "not configured; no real Supabase requests",
+  "pages": [
+    {
+      "path": "/",
+      "javascriptErrors": [],
+      "hasContent": true
+    },
+    {
+      "path": "/colecao",
+      "javascriptErrors": [],
+      "hasContent": true
+    },
+    {
+      "path": "/produto/polo-pima",
+      "javascriptErrors": [],
+      "hasContent": true
+    },
+    {
+      "path": "/sacola",
+      "javascriptErrors": [],
+      "hasContent": true
+    },
+    {
+      "path": "/sobre",
+      "javascriptErrors": [],
+      "hasContent": true
+    },
+    {
+      "path": "/contato",
+      "javascriptErrors": [],
+      "hasContent": true
+    },
+    {
+      "path": "/politicas",
+      "javascriptErrors": [],
+      "hasContent": true
+    },
+    {
+      "path": "/admin",
+      "javascriptErrors": [],
+      "hasContent": true
+    }
+  ]
+}

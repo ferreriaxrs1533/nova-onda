@@ -1,0 +1,236 @@
+
+> onda-vercel@2.0.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: Preview works without cloud credentials and never pretends admin is configured
+ok 1 - Preview works without cloud credentials and never pretends admin is configured
+  ---
+  duration_ms: 33.46466
+  type: 'test'
+  ...
+# Subtest: Vercel rewrite path reaches the API
+ok 2 - Vercel rewrite path reaches the API
+  ---
+  duration_ms: 6.587931
+  type: 'test'
+  ...
+# Subtest: No credentials are exposed by health
+ok 3 - No credentials are exposed by health
+  ---
+  duration_ms: 2.843621
+  type: 'test'
+  ...
+# Subtest: Unauthenticated visitors cannot read or write administrative data
+ok 4 - Unauthenticated visitors cannot read or write administrative data
+  ---
+  duration_ms: 9.807237
+  type: 'test'
+  ...
+# Subtest: Origin protection rejects cross-site writes
+ok 5 - Origin protection rejects cross-site writes
+  ---
+  duration_ms: 3.328777
+  type: 'test'
+  ...
+# Subtest: Login sets an HttpOnly SameSite cookie, without returning its raw token
+ok 6 - Login sets an HttpOnly SameSite cookie, without returning its raw token
+  ---
+  duration_ms: 5.043049
+  type: 'test'
+  ...
+# Subtest: CSRF is required for admin mutations
+ok 7 - CSRF is required for admin mutations
+  ---
+  duration_ms: 5.854407
+  type: 'test'
+  ...
+# Subtest: Invalid password fails and account-level rate limiting applies
+ok 8 - Invalid password fails and account-level rate limiting applies
+  ---
+  duration_ms: 19.615744
+  type: 'test'
+  ...
+# Subtest: Removing admin permission invalidates existing sessions
+ok 9 - Removing admin permission invalidates existing sessions
+  ---
+  duration_ms: 4.321293
+  type: 'test'
+  ...
+# Subtest: Expired sessions are rejected
+ok 10 - Expired sessions are rejected
+  ---
+  duration_ms: 3.220157
+  type: 'test'
+  ...
+# Subtest: Logout revokes the session
+ok 11 - Logout revokes the session
+  ---
+  duration_ms: 3.75714
+  type: 'test'
+  ...
+# Subtest: Published product appears and replaces demo products
+ok 12 - Published product appears and replaces demo products
+  ---
+  duration_ms: 4.762955
+  type: 'test'
+  ...
+# Subtest: Draft stays private and updates keep existing variant identities
+ok 13 - Draft stays private and updates keep existing variant identities
+  ---
+  duration_ms: 6.743582
+  type: 'test'
+  ...
+# Subtest: Bad publication data cannot be saved
+ok 14 - Bad publication data cannot be saved
+  ---
+  duration_ms: 9.184307
+  type: 'test'
+  ...
+# Subtest: External image URLs are rejected for real products
+ok 15 - External image URLs are rejected for real products
+  ---
+  duration_ms: 3.276059
+  type: 'test'
+  ...
+# Subtest: Negative stock, repeated size/color, and repeated SKU are rejected
+ok 16 - Negative stock, repeated size/color, and repeated SKU are rejected
+  ---
+  duration_ms: 7.121789
+  type: 'test'
+  ...
+# Subtest: Duplicate becomes draft with distinct slug and SKUs and no phantom stock
+ok 17 - Duplicate becomes draft with distinct slug and SKUs and no phantom stock
+  ---
+  duration_ms: 3.910166
+  type: 'test'
+  ...
+# Subtest: Archive removes visibility; delete removes the record
+ok 18 - Archive removes visibility; delete removes the record
+  ---
+  duration_ms: 5.464762
+  type: 'test'
+  ...
+# Subtest: Upload enforces image type and registers cloud URLs
+ok 19 - Upload enforces image type and registers cloud URLs
+  ---
+  duration_ms: 5.1383
+  type: 'test'
+  ...
+# Subtest: Upload rejects oversized files before storage
+ok 20 - Upload rejects oversized files before storage
+  ---
+  duration_ms: 7.184823
+  type: 'test'
+  ...
+# Subtest: Settings validate WhatsApp and ignore non-settings fields
+ok 21 - Settings validate WhatsApp and ignore non-settings fields
+  ---
+  duration_ms: 8.498564
+  type: 'test'
+  ...
+# Subtest: Bag validates server price and never accepts a fake client price
+ok 22 - Bag validates server price and never accepts a fake client price
+  ---
+  duration_ms: 18.227334
+  type: 'test'
+  ...
+# Subtest: Bag aggregates duplicate variants and rejects stock overrun
+ok 23 - Bag aggregates duplicate variants and rejects stock overrun
+  ---
+  duration_ms: 4.094738
+  type: 'test'
+  ...
+# Subtest: Demo items cannot be requested
+ok 24 - Demo items cannot be requested
+  ---
+  duration_ms: 1.797645
+  type: 'test'
+  ...
+# Subtest: WhatsApp produces a request, not a payment, and does not decrement stock
+ok 25 - WhatsApp produces a request, not a payment, and does not decrement stock
+  ---
+  duration_ms: 5.728041
+  type: 'test'
+  ...
+# Subtest: Cloud errors are not disguised as a working demo catalog
+ok 26 - Cloud errors are not disguised as a working demo catalog
+  ---
+  duration_ms: 1.738829
+  type: 'test'
+  ...
+# Subtest: Category creation and diagnostics require administrator permission
+ok 27 - Category creation and diagnostics require administrator permission
+  ---
+  duration_ms: 4.503122
+  type: 'test'
+  ...
+# Subtest: Missing env variables do not crash a preview build
+ok 28 - Missing env variables do not crash a preview build
+  ---
+  duration_ms: 0.8937
+  type: 'test'
+  ...
+# Subtest: Invalid URLs and a secret in the publishable-key slot are rejected
+ok 29 - Invalid URLs and a secret in the publishable-key slot are rejected
+  ---
+  duration_ms: 0.443865
+  type: 'test'
+  ...
+# Subtest: Modern secret keys are only sent in apikey, never as a bearer JWT
+ok 30 - Modern secret keys are only sent in apikey, never as a bearer JWT
+  ---
+  duration_ms: 15.478934
+  type: 'test'
+  ...
+# Subtest: Legacy service_role keys retain the legacy Authorization header
+ok 31 - Legacy service_role keys retain the legacy Authorization header
+  ---
+  duration_ms: 0.390637
+  type: 'test'
+  ...
+# Subtest: Product save calls the atomic RPC with a JSON body
+ok 32 - Product save calls the atomic RPC with a JSON body
+  ---
+  duration_ms: 1.072684
+  type: 'test'
+  ...
+# Subtest: Supabase constraint failures become safe conflict responses
+ok 33 - Supabase constraint failures become safe conflict responses
+  ---
+  duration_ms: 0.436945
+  type: 'test'
+  ...
+# Subtest: Rate limiter requires explicit true and fails closed
+ok 34 - Rate limiter requires explicit true and fails closed
+  ---
+  duration_ms: 0.407402
+  type: 'test'
+  ...
+# Subtest: Authentication uses public key, destroys Auth token, and returns only current user
+ok 35 - Authentication uses public key, destroys Auth token, and returns only current user
+  ---
+  duration_ms: 0.760363
+  type: 'test'
+  ...
+# Subtest: Credential or account changes invalidate application sessions
+ok 36 - Credential or account changes invalidate application sessions
+  ---
+  duration_ms: 2.054946
+  type: 'test'
+  ...
+# Subtest: HTTP errors and network failures never return raw upstream secrets
+ok 37 - HTTP errors and network failures never return raw upstream secrets
+  ---
+  duration_ms: 0.472368
+  type: 'test'
+  ...
+1..37
+# tests 37
+# suites 0
+# pass 37
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 265.790978
