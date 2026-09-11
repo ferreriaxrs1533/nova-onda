@@ -1,0 +1,9 @@
+{
+  "name": "nova-onda-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd onda-vercel-azul-mar && npm run build"
+  },
+  "engines": { "node": "22.x" }
+}
